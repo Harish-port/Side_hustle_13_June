@@ -1,16 +1,16 @@
 import React, { Component } from 'react';
-import * as Utils from '../Services/ApiHelper';
+import * as Utils from '../../Services/ApiHelper';
 
 export default class Stats extends Component {
     constructor() {
         super();
         this.state = {
-            stats: ""
+            stats: []
         }
     }
 
     componentDidMount() {
-        Utils.getStatsAll().then(res => {
+        Utils.getCountryList().then(res => {
             const info = res.data;
             this.setState({ stats: info });
         })
@@ -22,7 +22,7 @@ export default class Stats extends Component {
         const { stats } = this.state
         return (
             <div>
-                <h1>{}</h1>
+    
             </div>
         )
     }
