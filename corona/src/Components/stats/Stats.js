@@ -13,6 +13,7 @@ export default class Stats extends Component {
         Utils.getCountryList().then(res => {
             const info = res.data;
             this.setState({ stats: info });
+            console.log(info,"reposnes")
         })
             .catch(error => {
                 console.log(error)
