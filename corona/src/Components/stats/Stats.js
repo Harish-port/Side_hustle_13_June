@@ -23,7 +23,7 @@ export default class Stats extends Component {
         const { stats } = this.state
         return (
             <div>
-    
+                
             </div>
         )
     }
