@@ -48,10 +48,11 @@ export default class SearchBar extends Component {
                             return (
                                 <div key={i}>
                                     <p>
-                    <i className="fa fa-map-marker" aria-hidden="true"></i><span className="search-list ml-2">
+                    <i className="fa fa-map-marker" aria-hidden="true"></i><span className="search-list fors ml-2">
                     {item.Country}
 
                     </span>
+                    <h1>my wish</h1>
                                     </p>
                                 </div>
                             )
