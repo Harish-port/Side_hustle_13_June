@@ -13,7 +13,7 @@ export default class Stats extends Component {
         Utils.getCountryList().then(res => {
             const info = res.data;
             this.setState({ stats: info });
-            console.log(info,"reposnes")
+            console.log(info, "reposnes")
         })
             .catch(error => {
                 console.log(error)
@@ -23,7 +23,13 @@ export default class Stats extends Component {
         const { stats } = this.state
         return (
             <div>
-                
+                {stats.map((item, i) =>
+                    <ul key={i}>
+                        <li>
+                            {item.Country}
+                        </li>
+                    </ul>
+                )}
             </div>
         )
     }
