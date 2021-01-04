@@ -8,3 +8,6 @@ export function getStatsAll(){
 export function getCountryList(){
     return axios.get('https://api.covid19api.com/countries')
 }
+export function getSummary(){
+  return axios.get('https://api.covid19api.com/summary')
+}

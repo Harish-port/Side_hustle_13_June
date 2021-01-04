@@ -5,7 +5,7 @@ export default class Stats extends Component {
     constructor() {
         super();
         this.state = {
-            stats: []
+            statistics: []
         }
     }
 
