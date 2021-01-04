@@ -21,3 +21,15 @@
     pointer-events: none;
     color: #aaa;
 }
+.suggestions{
+    text-align: left;
+    margin-left: 20px;
+}
+
+.fa-map-marker,.search-list:hover{
+cursor:pointer;
+font-weight: bold;
+}
+.search-list:hover{
+    background-color: gainsboro;
+}

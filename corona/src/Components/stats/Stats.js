@@ -23,7 +23,9 @@ export default class Stats extends Component {
         const { stats } = this.state
         return (
             <div>
-                {stats.map((item, i) =>
+                {stats.filter((val)=>{
+                    
+                }).map((item, i) =>
                     <ul key={i}>
                         <li>
                             {item.Country}
