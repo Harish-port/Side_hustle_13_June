@@ -52,7 +52,6 @@ export default class SearchBar extends Component {
                                         <p>
                                             <i className="fa fa-map-marker" aria-hidden="true"></i><span className="search-list ml-2">
                                                 {item.Country}
-
                                             </span>
                                         </p>
                                     </div>

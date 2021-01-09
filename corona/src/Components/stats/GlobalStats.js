@@ -8,22 +8,26 @@ export default class GlobalStats extends Component {
             globalData: [],
         }
     }
-    componentDidMount() {
+    getSummary() {
         Utils.getSummary().then(res => {
-            const info = res.data.Global;
+            const info = res.data;
             this.setState({ globalData: info });
-            console.log(info, "global")
         })
             .catch(error => {
                 console.log(error)
             })
     }
+    componentDidMount() {
+        this.getSummary();
+    }
     render() {
-        const {globalData} = this.state;
-        console.log(globalData,"sdadadad")
+        const { Global } = this.state.globalData;
         return (
             <div>
-             <h2>CORONAVIRUS LIVE DATA AROUND THE WORLD</h2>
+                <div>
+
+                </div>
+                <h2>CORONAVIRUS LIVE DATA AROUND THE WORLD</h2>
                 <div className="container">
                     <table className="table table-striped mt-5">
                         <thead>
@@ -35,17 +39,15 @@ export default class GlobalStats extends Component {
                         </thead>
                         <tbody>
                             <tr>
-                                <td>John</td>
-                                <td>Doe</td>
-                                <td>john@example.com</td>
+                                <td>{Global?.TotalConfirmed}</td>
+                                <td>{Global?.TotalDeaths}</td>
+                                <td>{Global?.TotalRecovered}</td>
                             </tr>
                         </tbody>
                     </table>
-
-
                 </div>
                 <div className="refresh-button">
-                    <button className="btn btn-primary mt-4">Refresh </button>
+                    <button onClick={() => window.location.reload(false)}className="btn btn-primary mt-4">Refresh </button>
                 </div>
             </div>
         )

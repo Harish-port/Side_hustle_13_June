@@ -24,7 +24,6 @@ export default class Stats extends Component {
         return (
             <div>
                 {stats.filter((val)=>{
-                    
                 }).map((item, i) =>
                     <ul key={i}>
                         <li>
