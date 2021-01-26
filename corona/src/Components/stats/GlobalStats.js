@@ -20,13 +20,10 @@ export default class GlobalStats extends Component {
     componentDidMount() {
         this.getSummary();
     }
-    render() {
+    render() { 
         const { Global } = this.state.globalData;
         return (
             <div>
-                <div>
-
-                </div>
                 <h2>CORONAVIRUS LIVE DATA AROUND THE WORLD</h2>
                 <div className="container">
                     <table className="table table-striped mt-5">
@@ -47,7 +44,7 @@ export default class GlobalStats extends Component {
                     </table>
                 </div>
                 <div className="refresh-button">
-                    <button onClick={() => window.location.reload(false)}className="btn btn-primary mt-4">Refresh </button>
+                    <button onClick={() => window.location.reload(false)} className="btn btn-primary mt-4">Refresh </button>
                 </div>
             </div>
         )

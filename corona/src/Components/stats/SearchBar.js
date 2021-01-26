@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import './Stats.css'
 import * as Utils from '../../Services/ApiHelper';
 import GlobalStats from './GlobalStats';
+import CardView from '../CardView/CardView';
 
 export default class SearchBar extends Component {
     constructor() {
@@ -27,7 +28,7 @@ export default class SearchBar extends Component {
     }
     render() {
         const { stats, searchValue } = this.state
-
+console.log(stats);
         return (
             <div>
                 <div className="main">
@@ -57,10 +58,11 @@ export default class SearchBar extends Component {
                                     </div>
                                 )
                         }
-                        ) }
+                        )}
                     </div>
                 </div>
-                <GlobalStats/>
+                {searchValue ? <CardView/>
+                    : <GlobalStats global="randomValue" />}
             </div>
         )
     }

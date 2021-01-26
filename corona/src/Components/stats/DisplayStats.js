@@ -3,7 +3,6 @@ import * as Utils from '../../Services/ApiHelper';
 
 export default class Stats extends Component {
     constructor() {
-        super();
         this.state = {
             statistics: []
         }
